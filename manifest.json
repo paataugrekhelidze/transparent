@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Transparency",
+    "version": "0.1.0",
+    "author": "Paata Ugrekhelidze",
+    "browser_action": {
+        "default_icon": "logo.png",
+        "default_popup": "popup.html",
+        "default_title": "Brand Transparency Tracker"
+    },
+    "permissions": ["activeTab"] 
+}
