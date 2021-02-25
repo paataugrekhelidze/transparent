@@ -8,5 +8,6 @@
         "default_popup": "popup.html",
         "default_title": "Brand Transparency Tracker"
     },
-    "permissions": ["activeTab"] 
+    "permissions": ["activeTab"] ,
+    "content_security_policy": "script-src 'self' https://code.highcharts.com/highcharts.js https://code.highcharts.com/modules/data.js https://code.highcharts.com/modules/drilldown.js https://code.highcharts.com/modules/exporting.js https://code.highcharts.com/modules/export-data.js https://code.highcharts.com/modules/accessibility.js; object-src 'self'"
 }
