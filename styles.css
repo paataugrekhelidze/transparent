@@ -17,7 +17,7 @@ html {
   width: 800px;
   height: 600px;
   overflow-y: hidden;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   
 }
 body {
@@ -119,6 +119,7 @@ ul li{
 /* main content */
 .active-content{
   grid-area: content;
+  margin-top: 3rem;
 }
 .menu-bar{
   grid-area: menu;
@@ -136,117 +137,47 @@ ul li{
 }
 
 
-/* active content - general */
-.active-content ul{
-  width: 30rem;
+/* active content - loader */
+#loader{
+  width: 100%;
+  height: 100%;
 }
-
-.active-content ul li{
-  font-size: 1.5rem;
-  padding: 5px 5px;
-}
-
-.total-li{
-  /* padding-bottom: 6rem !important; */
-  text-align: center;
-}
-
-.block{
-  display: block;
+#loader img{
   margin: auto;
-  padding: 5px 45%;
+  margin-top: 9rem;
+  margin-right: 12rem;
+  display: block;
 }
 
-li:not(.total-li){
-  display: flex;
-  justify-content: space-between;
-  line-height: 2.5;
+/* active content - General */
+#General{
+  display: none;
 }
 
-/* score circles */
-/* Rating item */
-.rating {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  overflow: hidden;
+/* active content - news */
+#news-list{
+  width: 100%;
+}
+
+
+#news-list li{
+  font-size: 1.2rem;
+  padding: 10px 5px; 
+}
+
+#news-list li a{
+  color: #000;
+  text-decoration: underline;
+}
+
+#News{
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+  display: none;
   
-  background: var(--rating-color-default);
-  color: var(--rating-color-default);
-  width: var(--rating-size);
-  height: var(--rating-size);
-
-  /* Basic style for the text */
-  font-size: calc(var(--rating-size) / 3);
-  line-height: 1;
 }
-
-#total.rating{
-  width: var(--rating-size-lrg);
-  height: var(--rating-size-lrg);
-
-  /* Basic style for the text */
-  font-size: calc(var(--rating-size-lrg) / 3);
-}
-
-/* Rating circle content */
-.rating span {
-  position: relative;
-  display: flex;
-  font-weight: bold;
-  z-index: 2;
-}
-
-.rating span small {
-  font-size: 0.5em;
-  font-weight: 900;
-  align-self: center;
-}
-
-/* Bar mask, creates an inner circle with the same color as thee background */
-.rating::after {
-  content: "";
-  position: absolute;
-  top: var(--bar-size);
-  right: var(--bar-size);
-  bottom: var(--bar-size);
-  left: var(--bar-size);
-  background: var(--background-color);
-  border-radius: inherit;
-  z-index: 1;
-}
-
-/* Bar background */
-.rating::before {
-  content: "";
-  position: absolute;
-  top: var(--bar-size);
-  right: var(--bar-size);
-  bottom: var(--bar-size);
-  left: var(--bar-size);
-  border-radius: inherit;
-  box-shadow: 0 0 0 1rem var(--rating-color-background);
-  z-index: -1;
-}
-
-/* Classes to give different colors to ratings, based on their score */
-.rating.good {
-  background: var(--rating-color-good);
-  color: var(--rating-color-good);
-}
-
-.rating.meh {
-  background: var(--rating-color-meh);
-  color: var(--rating-color-meh);
-}
-
-.rating.bad {
-  background: var(--rating-color-bad);
-  color: var(--rating-color-bad);
-}
-
-.total{
-  margin: 10px auto;
+#News h4{
+  text-align: center;
+  margin-bottom: 5rem;
 }
